@@ -1,3 +1,4 @@
 class Pokemon < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :test
+  has_many :users, through: :tests
 end
