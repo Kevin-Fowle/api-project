@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :tests
+  has_many :pokemons, through: :tests
 end
