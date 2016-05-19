@@ -1,4 +1,6 @@
 class Test < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :pokemon
 
   def self.take_test
     # sends a request to take the test
