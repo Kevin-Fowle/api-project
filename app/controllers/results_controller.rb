@@ -1,4 +1,0 @@
-
-get '/results' do
-
-end
