@@ -1,9 +1,10 @@
+require 'httparty'
 get '/tests' do
 
-  @new_test_id = Test.take_test
-  p @new_test_id
-
-  p "here"
+  @new_test_id = HTTParty.get("https://api-sandbox.traitify.com/v1/assessments?temp_key=i0fbrjancasvgcvlep3cf3d15j", { "Content-Type" => "application/json", "deck_id" => "career-deck" });
+  p "========="
+  p @new_test_id.parsed_response
+  p "========="
   erb :'tests/index'
 end
 
@@ -11,5 +12,4 @@ get '/temp_key' do
   p "temp key"
   p params
 
-  # get_new_assessment_id(call)
 end

@@ -14,7 +14,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt'
-gem 'http'
+gem 'httparty'
 
 group :test do
   gem 'shoulda-matchers'
