@@ -13,6 +13,6 @@ require 'json'
 (1..151).each do |n|
   httparty_data = HTTParty.get("http://pokeapi.co/api/v1/pokemon/#{n}")
   data = JSON.parse(httparty_data.to_json)
-  Pokemon.create(name: data['sprites'].first['name'], type: data['types'].first['name'])
+  Pokemon.create(name: data['sprites'].first['name'], property: data['types'].first['name'])
 end
 # end
