@@ -1,0 +1,1 @@
+response = HTTParty.get('http://pokeapi.co/api/v2/pokemon/34/')
