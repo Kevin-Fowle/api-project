@@ -1,0 +1,27 @@
+
+<div>
+
+  <% if @errors %>
+  <div class="errors-wrapper">
+    <ul class="errors">
+      <% @errors.each do |error| %>
+        <li class="error"><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <form id="user_form" action="/login" method="post">
+    <label for="user[username]">Username:</label><br>
+    <input type="text" name="user[username]"><br>
+
+    <label for="user[email]">Email:</label><br>
+    <input type="text" name="user[email]"><br>
+
+    <label for="user[password]">Password:</label><br>
+    <input type="password" name="user[password]"><br>
+    <br>
+    <input type="submit" value="Login">
+  </form>
+
+</div>
