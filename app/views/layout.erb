@@ -23,27 +23,18 @@
   <header id="banner">
     <h1 id="title"><a href="/">Poke-Match</a></h1>
     <ul id="menu">
-      <% if current_user %>
-        <li><a href="/users/<%=current_user.id %>"><%= current_user.email %></a></li>
+        <li><a href="/users"</a></li>
         <li><a href="/logout">logout</a></li>
         <li><a href="/">home</a></li>
-      <% else %>
         <li><a href="/register">register</a></li>
         <li><a href="/login">login</a></li>
         <li><a href="/">home</a></li>
-      <% end %>
     </ul>
   </header>
   <body>
     <section id="restaurants">
       <div class="assessment"></div>
-      <script>
-        Traitify.setPublicKey("*");
-        Traitify.setHost("https://api-sandbox.traitify.com");
-        Traitify.setVersion("v1");
-        var assessmentId = "***";
-        Traitify.ui.load(assessmentId, ".assessment")
-      </script>
+
 
       <%= yield %>
     </section>
