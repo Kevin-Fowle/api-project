@@ -5,7 +5,7 @@ class CreateTests < ActiveRecord::Migration
       t.integer :pokemon_id, {null: false}
       t.string :results, {null: false}
 
-      t.timestamps, {null: false}
+      t.timestamps
     end
   end
 end

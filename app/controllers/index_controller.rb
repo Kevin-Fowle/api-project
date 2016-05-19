@@ -1,3 +1,3 @@
 get '/' do
-  redirect '/tests'
+  erb :'index'
 end

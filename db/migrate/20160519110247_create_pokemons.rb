@@ -1,10 +1,9 @@
-class CreatePokemon < ActiveRecord::Migration
+class CreatePokemons < ActiveRecord::Migration
   def change
     create_table :pokemons do |t|
       t.string :name, {null: false}
       t.string :type, {null: false}
 
-      t.timestamps null: false
-    end
+      t.timestamps
   end
 end
