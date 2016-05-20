@@ -14,7 +14,6 @@ require 'httparty'
 (1..151).each do |n|
   httparty_data = HTTParty.get("http://pokeapi.co/api/v1/pokemon/#{n}")
   data = JSON.parse(httparty_data.to_json)
-  p data
   exp = data["exp"]
   if exp == nil
     exp = 100
