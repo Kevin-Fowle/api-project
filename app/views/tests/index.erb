@@ -1,8 +1,9 @@
+
 <h2>Take the test</h2>
 
-<form action="/tests" method="post" class="test">
+<form action="/tests" method="post">
   <h4>If the following were running for President, who you got?</h4>
-  <select name="president" class='center'>
+  <select name="president">
     <option value="Trump">Trump</option>
     <option value="Gore">Gore</option>
     <option value="Nader">Nader</option>
@@ -12,42 +13,44 @@
   <br />
 
   <h4>On a scale from 1-11, how vivid is your imagination?</h4>
-  <input type="integer" name="imagination" class='center'>
+  <input type="integer" name="imagination">
   <br />
 
   <h4>How much do you enjoy parties with lots of strobe lights on a scale from 1-11?</h4>
-  <input type="integer" name="party" class='center'>
-  <br />
-
-  <h4>Are you a fight or flight personality?</h4>
-  <select name="personality" class='center'>
-    <option value="fighting">Fight</option>
-    <option value="flight">Flight</option>
-    <option value="No">Could this question be more obvious?</option>
-  </select>
+  <input type="integer" name="party">
   <br />
 
   <h4>Pick one: Romeo and Juliet, How to Train your Dragon, Game of Thrones, Peter Pan, or Office Space</h4>
-  <select name="movie" class='center'>
+  <select name="movie">
     <option value="Romeo and Juliet">Romeo and Juliet</option>
     <option>How to Train your Dragon</option>
     <option value="Game of Thrones">Game of Thrones</option>
-    <option value="Peter Pan">Peter Pan</option>
+    <option>Peter Pan</option>
     <option>Office Space</option>
   </select>
   <br />
 
   <h4>What has the highest likelihood of being real: the easter bunny, jaws, the human centipad from South Park, or Ghostbusters?</h4>
-  <select name="realness" class='center'>
+  <select name="realness">
     <option value="the easter bunny">The Easter Bunny</option>
     <option>Jaws</option>
     <option value="the human centipad">The Human Centipad from South Park</option>
     <option>Ghostbusters</option>
   </select>
+
+  <h4>On a scale from 1-100, how much do you enjoy engaging in debate?</h4>
+  <input type="integer" name="aggression">
   <br />
+
+  <h4>Under pressure how do you react?</h4>
+  <select name="personality">
+    <option value="fighting">Fight</option>
+    <option value="flight">Flight</option>
+  </select>
+  <br />
+
   <br />
   <input type="submit" value="Get your pokemon">
   <br />
+
 </form>
-
-

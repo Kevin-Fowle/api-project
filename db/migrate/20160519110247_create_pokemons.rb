@@ -3,6 +3,7 @@ class CreatePokemons < ActiveRecord::Migration
     create_table :pokemons do |t|
       t.string :name, {null: false}
       t.string :property, {null: false}
+      t.integer :exp, {null: false}
 
       t.timestamps
     end
