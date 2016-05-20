@@ -19,6 +19,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
+require 'httparty'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -36,10 +37,6 @@ configure do
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
-
-require APP_ROOT.join("config/twitter_keys") rescue nil
-require APP_ROOT.join("app/src/alchemyapi") rescue nil
-
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
